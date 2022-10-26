@@ -1,0 +1,36 @@
+main {
+    display: flex;
+
+    .left {
+        flex: 0.5;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+
+        .actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 300px;
+
+            .inputContainer {
+                display: flex;
+                justify-content: right;
+                gap: 10px;
+
+            }
+        }
+    }
+
+    .right {
+        flex: 1;
+    }
+}
+
+
