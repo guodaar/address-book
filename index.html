@@ -7,22 +7,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Address Book</title>
     <script defer src="./index.js"></script>
+    <script src="https://kit.fontawesome.com/0eb9458fd3.js"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./index.css">
 </head>
 
 <body>
     <header>
         <h1>Address Book</h1>
+        <div class="headerWrap">
+            <form id="searchBar">
+                <input type="text" id="search" name="search">
+                <input type="submit" id="searchBtn" value="Search"
+                    class="searchBtn">
+            </form>
+            <button id="clearAll">Clear All Entries</button>
+        </div>
+
     </header>
     <main>
         <div class="left">
-            <div class="actions">
-                <button id="clearAll">Clear All</button>
-                <form id="searchBar">
-                    <input type="text" id="search" name="search">
-                    <input type="submit" id="searchBtn" value="Search">
-                </form>
-            </div>
+
             <div class="formContainer">
                 <form id="addressEntry">
                     <div class="inputContainer">
@@ -52,15 +57,22 @@
                         <input type="text" id="streetAddress" name="street">
                     </div>
                     <div class="inputContainer">
-                        <input type="submit" id="save" value="Save">
+                        <input type="submit" id="save" value="Save"
+                            class="saveBtn">
                     </div>
                 </form>
             </div>
 
         </div>
         <div class="right">
-            <div id="addressBox"></div>
-            <div id="favorites"></div>
+            <h2 class="mainListHeader">Contact List</h2>
+            <h2 class="favListHeader">Favorites</h2>
+            <div id="addressBox" class="addressContainer">
+
+            </div>
+            <div id="favorites" class="favoritesContainer">
+
+            </div>
         </div>
     </main>
 </body>

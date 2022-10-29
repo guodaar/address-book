@@ -1,5 +1,94 @@
+@font-face {
+  font-family: "Visitor";
+  src: url("/font/visitor1.ttf");
+  src: url("/font/visitor1.ttf") format("truetype");
+}
+body {
+  background-color: black;
+  font-family: "Visitor";
+  text-transform: uppercase;
+  color: #1FC742;
+  font-size: 1.1rem;
+}
+
+button {
+  background-color: black;
+  color: #1FC742;
+  border: 3px dashed #1FC742;
+  font-family: "Visitor";
+  font-size: 1.1rem;
+  padding: 5px 25px;
+}
+
+button:active {
+  color: #025B18;
+}
+
+button:hover {
+  background-color: #023612;
+}
+
+h2 {
+  margin: 0 0 20px;
+  font-size: 2rem;
+  color: #1FC742;
+}
+
+header {
+  display: flex;
+  height: 70px;
+  border-bottom: 10px double #1FC742;
+  margin-bottom: 20px;
+  align-items: center;
+  gap: 30px;
+  justify-content: space-between;
+}
+header h1 {
+  text-transform: uppercase;
+  color: #1FC742;
+  font-size: 3rem;
+  margin: 0;
+}
+header .headerWrap {
+  display: flex;
+  justify-content: right;
+  gap: 20px;
+}
+header form {
+  display: flex;
+  gap: 10px;
+}
+header form input {
+  background-color: black;
+  border: none;
+  border-bottom: 3px dashed #025B18;
+  color: #1FC742;
+  font-family: "Visitor";
+  font-size: 1.1rem;
+}
+header form input:focus {
+  outline: none;
+}
+header form input::-webkit-outer-spin-button,
+header form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+header form .searchBtn {
+  border: 3px dashed #1FC742;
+  padding: 5px 25px;
+  font-size: 1.1rem;
+}
+header form .searchBtn:active {
+  color: #025B18;
+}
+header form .searchBtn:hover {
+  background-color: #023612;
+}
+
 main {
   display: flex;
+  gap: 20px;
 }
 main .left {
   flex: 0.5;
@@ -16,7 +105,34 @@ main .left form {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  width: 300px;
+  color: #1FC742;
+}
+main .left form input {
+  background-color: black;
+  border: none;
+  border-bottom: 3px dashed #025B18;
+  color: #1FC742;
+  font-family: "Visitor";
+  font-size: 1.1rem;
+}
+main .left form input:focus {
+  outline: none;
+}
+main .left form input::-webkit-outer-spin-button,
+main .left form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+main .left form .saveBtn {
+  border: 3px dashed #1FC742;
+  padding: 5px 25px;
+  font-size: 1.1rem;
+}
+main .left form .saveBtn:active {
+  color: #025B18;
+}
+main .left form .saveBtn:hover {
+  background-color: #023612;
 }
 main .left form .inputContainer {
   display: flex;
@@ -25,4 +141,38 @@ main .left form .inputContainer {
 }
 main .right {
   flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50px auto;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+main .right .mainListHeader {
+  grid-column: 1/2;
+}
+main .right .favListHeader {
+  grid-column: 2/3;
+}
+main .right .addressContainer {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+main .right .addressContainer .addBox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 3px dashed #1FC742;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+main .right .addressContainer .addBox p {
+  margin: 0;
+}
+main .right .addressContainer .addBox .btnContainer {
+  display: flex;
+  justify-content: space-between;
+}
+main .right .favoritesContainer {
+  grid-column: 2/3;
+  grid-row: 2/3;
 }/*# sourceMappingURL=index.css.map */
