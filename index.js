@@ -3,7 +3,7 @@ const adBox = document.querySelector("#addressBox");
 const favBox = document.querySelector("#favorites");
 
 let addressList = JSON.parse(localStorage.getItem("MyAddresses")) || [];
-const favArray = JSON.parse(localStorage.getItem("Favorites")) || [];
+let favArray = JSON.parse(localStorage.getItem("Favorites")) || [];
 
 createList(addressList, "contacts");
 
@@ -31,6 +31,7 @@ form.addEventListener("submit", (event) => {
 ////MAIN LIST CREATION///
 function createList(array, position) {
   adBox.innerHTML = "";
+  favBox.innerHTML = "";
   array.forEach((address, index) => {
     const pName = document.createElement("p");
     const pLName = document.createElement("p");
@@ -66,6 +67,8 @@ function createList(array, position) {
 
     if (position === "favorites") {
       favBox.appendChild(div);
+      // adBox.appendChild(div);
+      // div.setAttribute("class", "addBox");
       div.setAttribute("class", "favBox");
     } else if (position === "contacts") {
       adBox.appendChild(div);
@@ -100,6 +103,8 @@ clearAll.addEventListener("click", () => {
     localStorage.clear();
     addressList = [];
     adBox.innerHTML = "";
+    favArray = [];
+    favBox.innerHTML = "";
     form.reset();
   }
 });
