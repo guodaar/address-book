@@ -6,7 +6,6 @@ let addressList = JSON.parse(localStorage.getItem("MyAddresses")) || [];
 const favArray = JSON.parse(localStorage.getItem("Favorites")) || [];
 
 createList(addressList, "contacts");
-// favoriteList();
 
 ////MAIN SUBMIT////
 form.addEventListener("submit", (event) => {
