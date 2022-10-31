@@ -17,7 +17,7 @@ body {
 button {
     background-color: black;
     color: #1FC742;
-    border: 3px dashed #1FC742;
+    border: 3px solid #1FC742;
     font-family: 'Visitor';
     font-size: 1.1rem;
     padding: 5px 25px;
@@ -66,35 +66,21 @@ header {
         input {
             background-color: black;
             border: none;
-            border-bottom: 3px dashed #025B18;
+            border-bottom: 3px dashed #1FC742;
             color: #1FC742;
             font-family: 'Visitor';
             font-size: 1.1rem;
+
+        }
+
+        input::placeholder {
+            color: #025B18;
         }
     
         input:focus {
             outline: none;
         }
-    
-        input::-webkit-outer-spin-button,
-        input::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-        }
-    
-        .searchBtn {
-            border: 3px dashed #1FC742;
-            padding: 5px 25px;
-            font-size: 1.1rem;
-        }
-        
-        .searchBtn:active {
-            color: #025B18;
-        }
-        
-        .searchBtn:hover {
-            background-color: #023612;
-        }
+
     }
 }
 
@@ -119,6 +105,7 @@ main {
             flex-direction: column;
             gap: 10px;
             color: #1FC742;
+            margin-top: 40px;
 
             input {
                 background-color: black;
@@ -140,7 +127,7 @@ main {
             }
             
             .saveBtn {
-                border: 3px dashed #1FC742;
+                border: 3px solid #1FC742;
                 padding: 5px 25px;
                 font-size: 1.1rem;
             }
@@ -197,9 +184,6 @@ main {
                     display: flex;
                     justify-content: space-between;
                }
-
-
-
             }
             
         }
@@ -207,6 +191,25 @@ main {
         .favoritesContainer {
             grid-column: 2 / 3;
             grid-row: 2 / 3;
+
+            .favBox {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                border: 3px dashed #1FC742;
+                padding: 10px;
+                margin-bottom: 20px;
+
+                p {
+                    margin: 0;
+                }
+
+               .btnContainer {
+                    display: flex;
+                    justify-content: space-between;
+               }
+            }
+            
         }
     }
 }

@@ -14,7 +14,7 @@ body {
 button {
   background-color: black;
   color: #1FC742;
-  border: 3px dashed #1FC742;
+  border: 3px solid #1FC742;
   font-family: "Visitor";
   font-size: 1.1rem;
   padding: 5px 25px;
@@ -61,29 +61,22 @@ header form {
 header form input {
   background-color: black;
   border: none;
-  border-bottom: 3px dashed #025B18;
+  border-bottom: 3px dashed #1FC742;
   color: #1FC742;
   font-family: "Visitor";
   font-size: 1.1rem;
 }
-header form input:focus {
-  outline: none;
-}
-header form input::-webkit-outer-spin-button,
-header form input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-header form .searchBtn {
-  border: 3px dashed #1FC742;
-  padding: 5px 25px;
-  font-size: 1.1rem;
-}
-header form .searchBtn:active {
+header form input::-moz-placeholder {
   color: #025B18;
 }
-header form .searchBtn:hover {
-  background-color: #023612;
+header form input:-ms-input-placeholder {
+  color: #025B18;
+}
+header form input::placeholder {
+  color: #025B18;
+}
+header form input:focus {
+  outline: none;
 }
 
 main {
@@ -106,6 +99,7 @@ main .left form {
   flex-direction: column;
   gap: 10px;
   color: #1FC742;
+  margin-top: 40px;
 }
 main .left form input {
   background-color: black;
@@ -124,7 +118,7 @@ main .left form input::-webkit-inner-spin-button {
   margin: 0;
 }
 main .left form .saveBtn {
-  border: 3px dashed #1FC742;
+  border: 3px solid #1FC742;
   padding: 5px 25px;
   font-size: 1.1rem;
 }
@@ -175,4 +169,19 @@ main .right .addressContainer .addBox .btnContainer {
 main .right .favoritesContainer {
   grid-column: 2/3;
   grid-row: 2/3;
+}
+main .right .favoritesContainer .favBox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 3px dashed #1FC742;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+main .right .favoritesContainer .favBox p {
+  margin: 0;
+}
+main .right .favoritesContainer .favBox .btnContainer {
+  display: flex;
+  justify-content: space-between;
 }/*# sourceMappingURL=index.css.map */
