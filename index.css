@@ -1,21 +1,17 @@
-@font-face {
-  font-family: "Visitor";
-  src: url("/font/visitor1.ttf");
-  src: url("/font/visitor1.ttf") format("truetype");
-}
 body {
   background-color: black;
-  font-family: "Visitor";
+  font-family: "VT323", monospace;
   text-transform: uppercase;
   color: #1FC742;
   font-size: 1.1rem;
+  margin: 10px 40px;
 }
 
 button {
   background-color: black;
   color: #1FC742;
   border: 3px solid #1FC742;
-  font-family: "Visitor";
+  font-family: "VT323", monospace;
   font-size: 1.1rem;
   padding: 5px 25px;
 }
@@ -63,7 +59,7 @@ header form input {
   border: none;
   border-bottom: 3px dashed #1FC742;
   color: #1FC742;
-  font-family: "Visitor";
+  font-family: "VT323", monospace;
   font-size: 1.1rem;
 }
 header form input::-moz-placeholder {
@@ -90,45 +86,45 @@ main .left {
   gap: 20px;
   align-items: center;
 }
-main .left .actions {
+main .left .formContainer {
   display: flex;
-  gap: 10px;
+  flex-direction: column;
+  gap: 20px;
 }
-main .left form {
-  display: flex;
+main .left .formContainer form {
+  display: none;
   flex-direction: column;
   gap: 10px;
   color: #1FC742;
-  margin-top: 40px;
 }
-main .left form input {
+main .left .formContainer form input {
   background-color: black;
   border: none;
   border-bottom: 3px dashed #025B18;
   color: #1FC742;
-  font-family: "Visitor";
+  font-family: "VT323", monospace;
   font-size: 1.1rem;
 }
-main .left form input:focus {
+main .left .formContainer form input:focus {
   outline: none;
 }
-main .left form input::-webkit-outer-spin-button,
-main .left form input::-webkit-inner-spin-button {
+main .left .formContainer form input::-webkit-outer-spin-button,
+main .left .formContainer form input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-main .left form .saveBtn {
+main .left .formContainer form .saveBtn {
   border: 3px solid #1FC742;
   padding: 5px 25px;
   font-size: 1.1rem;
 }
-main .left form .saveBtn:active {
+main .left .formContainer form .saveBtn:active {
   color: #025B18;
 }
-main .left form .saveBtn:hover {
+main .left .formContainer form .saveBtn:hover {
   background-color: #023612;
 }
-main .left form .inputContainer {
+main .left .formContainer form .inputContainer {
   display: flex;
   justify-content: right;
   gap: 10px;
@@ -170,7 +166,7 @@ main .right .favoritesContainer {
   grid-column: 2/3;
   grid-row: 2/3;
 }
-main .right .favoritesContainer .favBox {
+main .right .favoritesContainer .addBox {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -178,10 +174,10 @@ main .right .favoritesContainer .favBox {
   padding: 10px;
   margin-bottom: 20px;
 }
-main .right .favoritesContainer .favBox p {
+main .right .favoritesContainer .addBox p {
   margin: 0;
 }
-main .right .favoritesContainer .favBox .btnContainer {
+main .right .favoritesContainer .addBox .btnContainer {
   display: flex;
   justify-content: space-between;
 }/*# sourceMappingURL=index.css.map */
